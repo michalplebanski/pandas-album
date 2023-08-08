@@ -47,7 +47,7 @@ earliest_albums = df_copy.groupby("Artysta")["Rok"].min().reset_index()
 
 print(f"Najwcześniej wydane albumy każdego artysty:{earliest_albums}")
 
-writer = pd.ExcelWriter('new-data.xlsx', engine='openpyxl')
+writer = pd.ExcelWriter('new-data.csv', engine='openpyxl')
 df_copy.to_excel(writer, index=False)
 
 writer.close()
